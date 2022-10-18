@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+</head>
+<body>
+    <div class="div">
+        <div style="width: 100%;height: 300px">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/xYLxUJ9v6KU?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <h1>I Did Something Bad</h1>
+        <p>Eylül selam şu an yazdığım bu basit siteyi sana hediye ediyorum bu şarkı da sana gelsin benden jdjdjddndj <3 </p>
+            <div class="calc">
+                <input type="number" id="calcif">
+                <select name="operate" id="calcio">
+                    <option id="plus">+</option>
+                    <option id="minus">-</option>
+                    <option id="times">x</option>
+                    <option id="over">/</option>
+                    <option id="module">%</option>
+                </select>
+                <input type="number" id="calcis">
+                <button onclick="calcRes()">=</button>
+                <p><span id="res">0</span></p>
+            </div>
+        </div>
+        <script>
+            function calcRes(event) {
+                const calcif = document.getElementById('calcif');
+                const calcio = document.getElementById('calcio');
+                const calcis = document.getElementById('calcis');
+                const res = document.getElementById('res');
+                const plus = document.getElementById('plus');
+                const minus = document.getElementById('minus');
+                const times = document.getElementById('times');
+                const over = document.getElementById('over');
+                const module = document.getElementById('module');
+                
+                var cifv = calcif.value;
+                var cisv = calcis.value;
+
+                if(plus.selected===true){
+                    res.innerHTML = cifv + cisv;
+                }else if(minus.selected===true){
+                    res.innerHTML = cifv - cisv;
+
+                }else if(times.selected===true){
+                    res.innerHTML = cifv * cisv;
+
+                }else if(over.selected===true){
+                    res.innerHTML = cifv / cisv;
+
+                }else if(module.selected===true){
+                    res.innerHTML = cifv % cisv;
+
+                }else{
+                    res.innerHTML = "0";
+
+                }
+            }
+                
+
+        </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@800&display=swap');
+
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        .div{
+            width: 100%;
+            min-height: 100vh;
+            background-image: linear-gradient(to right,#f74c2e,#b9f826,#3c7ffd,#3232ff,#15ff34,#ff4d6a,purple);
+        }
+
+        .div h1{
+            max-width: 240px;
+            font-family: 'DM Serif Display', serif;
+            font-size: 42px;
+            color: #ffee00;
+            margin: 0 auto;
+        }
+
+        .div p{
+            max-width: 240px;
+            font-family: 'Manrope', sans-serif;
+            font-size: 24px;
+            color: #000;
+            margin: 0 auto;
+        }
+
+        .calc{
+            width: 380px;
+            height: 80px;
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            font-family: 'Manrope', sans-serif;
+            color: #eee;
+            background-color: #141414;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .calc input{
+            width: 80px;
+            height: 30px;
+            text-align: center;
+            border: 0;
+            border-radius: 250px;
+            font-family: 'Manrope', sans-serif;
+            color: #000;
+            background-color: #eee;
+            align-self: center;
+        }
+
+        .calc input::placeholder{
+            color: #333;
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .calc select{
+            width: 40px;
+            height: 40px;
+            border: 0;
+            border-radius: 250px;
+            color: #000;
+            background-color: #eee;
+            font-family: 'Manrope', sans-serif;
+            align-self: center;
+        }
+
+        .calc button{
+            width: 40px;
+            height: 40px;
+            border: 0;
+            border-radius: 250px;
+            color: #fff;
+            background-color: #ff5b29;
+            font-family: 'Manrope', sans-serif;
+            align-self: center;
+        }
+
+        .calc p{
+            font-family: 'Manrope', sans-serif;
+            color: #fff;
+            align-self: center;
+        }
+
+        @media (max-width: 1200px){
+            .calc{
+                max-width: 100%;
+            }
+        }
+
+    </style>
+</body>
+</html>
