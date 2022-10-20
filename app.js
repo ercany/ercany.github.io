@@ -20,7 +20,7 @@ function cload(){
 
 function changep(){
     for(i=0;i<=clen;i++){
-        clist.push(`./video/video${i}.mp4`);
+        clist.push(`./video${i}.mp4`);
         clen++;
         if(clen==capc){
             break;
